@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ngàn tiện ích số Cô Tô</title>
+<style>
+:root{
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  --bg:#d6eafd;--card:#fff;--line:#c3dcf7;--text:#12253f;--muted:#5a6f8a;
+  --hero1:#2b7de9;--hero2:#4db8f5;--accent:#1f74dc;--icon-bg:#e1f0ff;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark) and (min-width:99999px){
+  :root:not([data-theme="light"]){
+    --bg:#000;--card:#0b0b0d;--line:#26272b;--text:#f2f4f8;--muted:#a3a9b5;
+    --hero1:#1a56ad;--hero2:#1d63c4;--accent:#6aa8ff;--icon-bg:#10233f;color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#000;--card:#0b0b0d;--line:#26272b;--text:#f2f4f8;--muted:#a3a9b5;
+  --hero1:#1a56ad;--hero2:#1d63c4;--accent:#6aa8ff;--icon-bg:#10233f;color-scheme:dark;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;background:#d6eafd;color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.4}
+.wrap{max-width:480px;margin:0 auto;padding:16px 14px 32px}
+.hero{background:linear-gradient(160deg,var(--hero1),var(--hero2));color:#fff;border-radius:18px;padding:22px 16px;text-align:center}
+.hero svg{width:30px;height:30px;margin-bottom:8px}
+.hero h1{margin:0;font-size:22px;letter-spacing:.3px}
+.hero h2{margin:6px 0 10px;font-size:17px;font-weight:700;letter-spacing:.4px;color:#dff0ff}
+.hero p{margin:0;font-size:14px;opacity:.92}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:14px}
+@media (max-width:320px){.grid{grid-template-columns:minmax(0,1fr)}.card{min-height:0}.hero h2{font-size:15px}}
+body{overflow-wrap:break-word;-webkit-text-size-adjust:100%}
+.card{display:block;text-decoration:none;color:inherit;background:#fff;border:1.5px solid #8fc0f5;border-radius:16px;padding:16px 14px;min-height:190px;transition:transform .12s,border-color .12s}
+.card:active{transform:scale(.97);border-color:var(--accent)}
+.ico{width:34px;height:34px;border-radius:10px;background:var(--icon-bg);display:grid;place-items:center;margin-bottom:14px}
+.ico svg{width:18px;height:18px;stroke:var(--accent);fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.card h3{margin:0 0 8px;font-size:clamp(15px,4.4vw,17px);line-height:1.3;color:#1560c4}
+.card p{margin:0;font-size:14px;color:var(--muted)}
+button.card{width:100%;text-align:left;font:inherit;cursor:pointer;box-shadow:0 2px 10px rgba(31,116,220,.10)}
+.play{display:inline-flex;align-items:center;gap:6px;margin-top:12px;font-size:13px;font-weight:600;color:var(--accent)}
+.play svg{width:14px;height:14px;fill:var(--accent)}
+.ov{position:fixed;inset:0;background:rgba(0,0,0,.65);display:none;align-items:flex-end;justify-content:center;z-index:50}
+.ov.on{display:flex}
+.sheet{width:100%;max-width:480px;background:var(--card);color:var(--text);border-radius:20px 20px 0 0;padding:16px 14px calc(18px + env(safe-area-inset-bottom,0px));max-height:92%;overflow-y:auto}
+.sh-top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:10px}
+.sh-top h3{margin:0;font-size:17px}
+.x{border:0;background:var(--icon-bg);color:var(--text);width:34px;height:34px;border-radius:50%;font-size:20px;line-height:1;cursor:pointer;flex:none}
+.vid{width:100%;aspect-ratio:16/9;background:#000;border-radius:12px;overflow:hidden;display:grid;place-items:center;color:#aaa;font-size:14px;text-align:center}
+.vid iframe,.vid video{width:100%;height:100%;border:0}
+.open{display:block;margin-top:12px;text-align:center;padding:12px;border-radius:12px;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;font-size:15px}
+.desc{margin:10px 0 0;font-size:14px;color:var(--muted)}
+footer{margin-top:20px;text-align:center;font-size:12px;color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <section class="hero">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM20 14v.01M14 20h3M20 17v4"/></svg>
+    <h1>MỘT MÃ QR</h1>
+    <h2>NGÀN TIỆN ÍCH SỐ CÔ TÔ</h2>
+    <p>Quét một lần – Kết nối nhiều tiện ích</p>
+  </section>
+
+  <main class="grid" id="grid"></main>
+  <footer>Cổng tiện ích số xã Cô Tô</footer>
+</div>
+
+<script>
+// Sửa link ở đây: thay "#" bằng địa chỉ trang thật của từng mục.
+const ITEMS = [
+  {t:"1. Thủ tục hành chính", d:"Tra cứu thủ tục, hồ sơ, cách nộp trực tuyến.", href:"#",
+   i:'<path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 14l2 2 4-4"/>'},
+  {t:"2. VNeID và tiện ích số", d:"Hướng dẫn sử dụng tài khoản định danh điện tử.", href:"#",
+   i:'<rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/>'},
+  {t:"3. An toàn trên mạng", d:"Nhận biết giả mạo, bảo vệ tài khoản.", href:"#",
+   i:'<path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/>'},
+  {t:"4. Bản đồ số xã Cô Tô", d:"Tìm cơ quan, trường học, trạm y tế, các ấp.", ext:true, href:"https://bcmikion5-cell.github.io/Du_An_AP/", /* dán link trang bản đồ vào href */
+   i:'<circle cx="12" cy="8" r="2.5"/><path d="M12 10.5V20M6 14c0 3 3 6 6 6s6-3 6-6"/>'},
+  {t:"5. Phản ánh, kiến nghị", d:"Chọn kênh tiếp nhận phù hợp, biết nơi cần liên hệ.", href:"#",
+   i:'<path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/>'},
+  {t:"6. Thông tin thiết yếu", d:"Địa chỉ, số điện thoại và đầu mối hỗ trợ.", href:"#",
+   i:'<path d="M4 21V8l5-3v16M9 21V10l7 3v8M3 21h18M12 14v.01M12 17v.01"/>'}
+];
+// Dán link video cho từng mục (theo đúng thứ tự 1 → 6). Hỗ trợ YouTube hoặc file .mp4.
+const VIDEOS = [
+  "", // 1. Thủ tục hành chính
+  "", // 2. VNeID và tiện ích số
+  "", // 3. An toàn trên mạng
+  "", // 4. Bản đồ số xã Cô Tô
+  "", // 5. Phản ánh, kiến nghị
+  ""  // 6. Thông tin thiết yếu
+];
+const PLAY = '<svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg>';
+document.getElementById("grid").innerHTML = ITEMS.map((x,n) =>
+  `<button class="card" data-n="${n}"><div class="ico"><svg viewBox="0 0 24 24">${x.i}</svg></div><h3>${x.t}</h3><p>${x.d}</p><span class="play">${x.ext ? "↗ Mở trang bản đồ" : PLAY + " Xem video"}</span></button>`
+).join("");
+
+const ov = document.createElement("div");
+ov.className = "ov";
+ov.innerHTML = '<div class="sheet"><div class="sh-top"><h3 id="sh-t"></h3><button class="x" id="sh-x" aria-label="Đóng">×</button></div><div class="vid" id="sh-v"></div><p class="desc" id="sh-d"></p><a class="open" id="sh-o" target="_blank" rel="noopener">Mở video ở tab mới</a></div>';
+document.body.appendChild(ov);
+const $ = id => document.getElementById(id);
+
+function ytId(u){
+  const m = u.match(/(?:youtu\.be\/|v=|embed\/|shorts\/)([\w-]{11})/);
+  return m ? m[1] : null;
+}
+function openVideo(n){
+  const x = ITEMS[n], url = VIDEOS[n];
+  $("sh-t").textContent = x.t;
+  $("sh-d").textContent = x.d;
+  const box = $("sh-v"), link = $("sh-o");
+  box.innerHTML = "";
+  if(!url){
+    box.textContent = x.ext ? "Liên kết đang được cập nhật" : "Video đang được cập nhật";
+    link.style.display = "none";
+  } else {
+    link.style.display = "block";
+    link.href = url;
+    const id = ytId(url);
+    if(id){
+      box.innerHTML = '<iframe src="https://www.youtube.com/embed/'+id+'?rel=0&playsinline=1" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>';
+    } else {
+      box.innerHTML = '<video controls playsinline preload="metadata" src="'+url+'"></video>';
+    }
+  }
+  ov.classList.add("on");
+}
+function closeVideo(){ ov.classList.remove("on"); $("sh-v").innerHTML = ""; }
+$("grid").addEventListener("click", e => {
+  const b = e.target.closest(".card");
+  if(!b) return;
+  const n = +b.dataset.n, x = ITEMS[n];
+  if(x.ext && x.href) window.open(x.href, "_blank", "noopener");
+  else openVideo(n);
+});
+$("sh-x").addEventListener("click", closeVideo);
+ov.addEventListener("click", e => { if(e.target === ov) closeVideo(); });
+document.addEventListener("keydown", e => { if(e.key === "Escape") closeVideo(); });
+</script>
+</body>
+</html>
